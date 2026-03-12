@@ -1,0 +1,540 @@
+/* Page Header */
+.inpatient-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.inpatient-header-content h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 8px 0;
+}
+
+.inpatient-header-content p {
+    color: var(--text-secondary);
+    font-size: 16px;
+    margin: 0;
+}
+
+.inpatient-header-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.inpatient-search-wrapper {
+    position: relative;
+}
+
+.inpatient-search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748b;
+    pointer-events: none;
+}
+
+.inpatient-search-input {
+    width: 300px;
+    height: 44px;
+    padding-left: 44px;
+    padding-right: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    font-size: 14px;
+    outline: none;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.inpatient-btn-primary {
+    height: 44px;
+    padding: 0 20px;
+    background: #0ea5e9;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.inpatient-btn-primary:hover {
+    background: #0284c7;
+}
+
+/* Filter Bar */
+.inpatient-filter-bar {
+    background: var(--bg-secondary);
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.inpatient-filter-label {
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.inpatient-filter-select {
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    font-size: 14px;
+    padding: 0 16px;
+    color: var(--text-primary);
+    background: var(--card-bg);
+    outline: none;
+    cursor: pointer;
+}
+
+[data-theme="dark"] .inpatient-filter-select {
+    background: #0f172a;
+}
+
+[data-theme="light"] .inpatient-filter-select {
+    background: white;
+}
+
+.inpatient-count-badge {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+[data-theme="dark"] .inpatient-count-badge {
+    background: #334155;
+    color: #94a3b8;
+}
+
+[data-theme="light"] .inpatient-count-badge {
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+/* Table Container */
+.inpatient-table {
+    background: var(--bg-secondary);
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.inpatient-table-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.inpatient-table-header h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+/* Admission Row */
+.admission-row {
+    padding: 20px 24px;
+    border-bottom: 1px solid;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+[data-theme="dark"] .admission-row {
+    border-bottom-color: #334155;
+}
+
+[data-theme="light"] .admission-row {
+    border-bottom-color: #f1f5f9;
+}
+
+.admission-row:last-child {
+    border-bottom: none;
+}
+
+.admission-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+[data-theme="dark"] .admission-icon {
+    background: #334155;
+}
+
+[data-theme="light"] .admission-icon {
+    background: #f1f5f9;
+}
+
+.admission-info {
+    flex: 1;
+}
+
+.admission-name-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 4px;
+}
+
+.admission-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.admission-patient-id {
+    padding: 2px 8px;
+    background: #e0f2fe;
+    color: #0369a1;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.admission-status-badge {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.admission-status-admitted {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.admission-status-discharged {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.admission-details {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin: 0 0 4px 0;
+}
+
+.admission-details svg {
+    display: inline;
+    margin-right: 4px;
+}
+
+.admission-diagnosis {
+    font-size: 12px;
+    color: #0ea5e9;
+    margin: 4px 0 0 0;
+}
+
+.admission-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-discharge {
+    padding: 6px 12px;
+    background: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.btn-discharge:hover {
+    background: #fee2e2;
+}
+
+/* Empty State */
+.inpatient-empty {
+    padding: 60px 24px;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+
+/* Admit Modal */
+.inpatient-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(30, 41, 59, 0.5);
+    z-index: 100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.inpatient-modal.active {
+    display: flex;
+}
+
+.inpatient-modal-container {
+    background: var(--bg-secondary);
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    padding: 32px;
+    width: 800px;
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.inpatient-modal-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+}
+
+.inpatient-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.inpatient-form-label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+[data-theme="dark"] .inpatient-form-label {
+    color: #94a3b8;
+}
+
+[data-theme="light"] .inpatient-form-label {
+    color: #374151;
+}
+
+.inpatient-form-input,
+.inpatient-form-textarea {
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid;
+    font-size: 14px;
+    padding: 0 12px;
+    color: var(--text-primary);
+    outline: none;
+}
+
+[data-theme="dark"] .inpatient-form-input,
+[data-theme="dark"] .inpatient-form-textarea {
+    border-color: #334155;
+    background: #0f172a;
+}
+
+[data-theme="light"] .inpatient-form-input,
+[data-theme="light"] .inpatient-form-textarea {
+    border-color: #d1d5db;
+    background: white;
+}
+
+.inpatient-form-input:disabled {
+    cursor: not-allowed;
+}
+
+[data-theme="dark"] .inpatient-form-input:disabled {
+    color: #64748b;
+    background: #0f172a;
+}
+
+[data-theme="light"] .inpatient-form-input:disabled {
+    color: #6b7280;
+    background: #f9fafb;
+}
+
+.inpatient-form-textarea {
+    height: 80px;
+    padding: 12px;
+    resize: none;
+}
+
+.inpatient-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+/* Dropdown */
+.inpatient-dropdown-wrapper {
+    position: relative;
+}
+
+.inpatient-dropdown-input {
+    width: 100%;
+    cursor: pointer;
+}
+
+.inpatient-dropdown {
+    position: absolute;
+    top: 44px;
+    left: 0;
+    right: 0;
+    background: var(--bg-secondary);
+    border: 1px solid;
+    border-radius: 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+[data-theme="dark"] .inpatient-dropdown {
+    border-color: #334155;
+}
+
+[data-theme="light"] .inpatient-dropdown {
+    border-color: #d1d5db;
+}
+
+.inpatient-dropdown-item {
+    padding: 10px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid;
+    font-size: 14px;
+}
+
+[data-theme="dark"] .inpatient-dropdown-item {
+    border-bottom-color: #334155;
+}
+
+[data-theme="light"] .inpatient-dropdown-item {
+    border-bottom-color: #f1f5f9;
+}
+
+.inpatient-dropdown-item:hover {
+    background: var(--hover-bg);
+}
+
+[data-theme="dark"] .inpatient-dropdown-item:hover {
+    background: #334155;
+}
+
+[data-theme="light"] .inpatient-dropdown-item:hover {
+    background: #f8fafc;
+}
+
+.inpatient-dropdown-item-title {
+    font-weight: 500;
+}
+
+[data-theme="dark"] .inpatient-dropdown-item-title {
+    color: #f8fafc;
+}
+
+[data-theme="light"] .inpatient-dropdown-item-title {
+    color: #1f2937;
+}
+
+.inpatient-dropdown-item-subtitle {
+    font-size: 12px;
+}
+
+[data-theme="dark"] .inpatient-dropdown-item-subtitle {
+    color: #94a3b8;
+}
+
+[data-theme="light"] .inpatient-dropdown-item-subtitle {
+    color: #64748b;
+}
+
+.inpatient-dropdown-empty {
+    padding: 12px;
+    font-size: 14px;
+}
+
+[data-theme="dark"] .inpatient-dropdown-empty {
+    color: #94a3b8;
+}
+
+[data-theme="light"] .inpatient-dropdown-empty {
+    color: #64748b;
+}
+
+/* Modal Footer */
+.inpatient-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.inpatient-btn-cancel {
+    padding: 10px 24px;
+    border: 1px solid;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+[data-theme="dark"] .inpatient-btn-cancel {
+    background: #334155;
+    color: #94a3b8;
+    border-color: #475569;
+}
+
+[data-theme="light"] .inpatient-btn-cancel {
+    background: #f1f5f9;
+    color: #64748b;
+    border-color: #e2e8f0;
+}
+
+.inpatient-btn-submit {
+    padding: 10px 24px;
+    background: #0ea5e9;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.inpatient-btn-submit:hover {
+    background: #0284c7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .inpatient-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .inpatient-search-input {
+        width: 100%;
+    }
+
+    .inpatient-filter-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .inpatient-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admission-row {
+        flex-wrap: wrap;
+    }
+}
